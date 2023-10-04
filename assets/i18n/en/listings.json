@@ -1,0 +1,198 @@
+{
+    "coc": {
+        "ammo": {
+            "title": "Call of Cthulhu - Ammo",
+            "form": {
+                "add": "Add ammo",
+                "edit": "Edit ammo",
+                "mappings": {
+                    "name": {
+                        "label": "Name",
+                        "notNullMessage": "$t(coc.ammo.form.mappings.name.label) cant be null"
+                    },
+                    "roundsShot": {
+                        "label": "Rounds shot with each",
+                        "notNullMessage": "$t(coc.ammo.form.mappings.roundsShot.label) cant be null"
+                    }
+                },
+                "saveMessage": "Ammo saved successfully!"
+            }
+        },
+        "occupation": {
+            "title": "Call of Cthulhu - Occupations",
+            "form": {
+                "add": "Add occupation",
+                "edit": "Edit occupation",
+                "mappings": {
+                    "name": {
+                        "label": "Name",
+                        "notNullMessage": "$t(coc.occupation.form.mappings.name.label) cant be null"
+                    },
+                    "description": {
+                        "label": "Description",
+                        "notNullMessage": "$t(coc.occupation.form.mappings.description.label) cant be null"
+                    },
+                    "skillPointCalculationRule": {
+                        "label": "Skill point calculation rule",
+                        "notNullMessage": "$t(coc.occupation.form.mappings.skillPointCalculationRule.label) cant be null"
+                    },
+                    "minimumCreditRating": {
+                        "label": "Minimum credit rating",
+                        "notNullMessage": "$t(coc.occupation.form.mappings.minimumCreditRating.label) cant be null"
+                    },
+                    "maximumCreditRating": {
+                        "label": "Maximum credit rating",
+                        "notNullMessage": "$t(coc.occupation.form.mappings.maximumCreditRating.label) cant be null"
+                    },
+                    "suggestedContacts": {
+                        "label": "Suggested contacts"
+                    },
+                    "epochPersonalSkillChoices": {
+                        "label": "Skill choices - Epoch or Personal"
+                    },
+                    "typedSkillChoices": {
+                        "label": "Skill choices - by type"
+                    },
+                    "typedSkillChoicesKind": {
+                        "label": "Skill type"
+                    },
+                    "skills": {
+                        "label": "Skills"
+                    }
+                },
+                "saveMessage": "Occupation saved successfully!"
+            }
+        },
+        "pulpTalent": {
+            "title": "Call of Cthulhu - Talents (PCoC)",
+            "form": {
+                "add": "Add talent (PCoC)",
+                "edit": "Edit talent (PCoC)",
+                "mappings": {
+                    "name": {
+                        "label": "Name",
+                        "notNullMessage": "$t(coc.pulpTalent.form.mappings.name.label) cant be null"
+                    },
+                    "description": {
+                        "label": "Description",
+                        "notNullMessage": "$t(coc.pulpTalent.form.mappings.description.label) cant be null"
+                    }
+                },
+                "saveMessage": "Talent saved successfully!"
+            }
+        },
+        "skill": {
+            "title": "Call of Cthulhu - Skills",
+            "form": {
+                "add": "Add skill",
+                "edit": "Edit skill",
+                "mappings": {
+                    "name": {
+                        "label": "Name",
+                        "notNullMessage": "$t(coc.skill.form.mappings.name.label) cant be null"
+                    },
+                    "baseValue": {
+                        "label": "Base value"
+                    },
+                    "usable": {
+                        "label": "Usable in character sheet"
+                    },
+                    "rarity": {
+                        "label": "Rarity",
+                        "notNullMessage": "$t(coc.skill.form.mappings.rarity.label) cant be null"
+                    },
+                    "kind": {
+                        "label": "Kind",
+                        "notNullMessage": "$t(coc.skill.form.mappings.kind.label) cant be null"
+                    },
+                    "parentSkillId": {
+                        "label": "Parent skill"
+                    }
+                },
+                "saveMessage": "Skill saved successfully!"
+            }
+        },
+        "weapon": {
+            "title": "Call of Cthulhu - Weapons",
+            "form": {
+                "add": "Add weapon",
+                "edit": "Edit weapon",
+                "mappings": {
+                    "name": {
+                        "label": "Name",
+                        "notNullMessage": "$t(coc.weapon.form.mappings.name.label) cant be null"
+                    },
+                    "range": {
+                        "label": "Range"
+                    },
+                    "damage": {
+                        "label": "Damage",
+                        "notNullMessage": "$t(coc.weapon.form.mappings.damage.label) cant be null"
+                    },
+                    "attacksPerRound": {
+                        "label": "Attacks each round",
+                        "notNullMessage": "$t(coc.weapon.form.mappings.attacksPerRound.label) cant be null"
+                    },
+                    "malfunction": {
+                        "label": "Malfunction"
+                    },
+                    "isMelee": {
+                        "label": "Melee weapon"
+                    },
+                    "isThrowable": {
+                        "label": "Throwable"
+                    },
+                    "isDualWield": {
+                        "label": "Dual wielding"
+                    },
+                    "skillUsedId": {
+                        "label": "Used skill",
+                        "notNullMessage": "$t(coc.weapon.form.mappings.skillUsedId.label) cant be null"
+                    },
+                    "ammoId": {
+                        "label": "Used ammo"
+                    }
+                },
+                "saveMessage": "Weapon saved successfully!"
+            }
+        },
+        "spell": {
+            "title": "Call of Cthulhu - Spells",
+            "form": {
+                "add": "Add spell",
+                "edit": "Edit spell",
+                "mappings": {
+                    "name": {
+                        "label": "Name",
+                        "notNullMessage": "$t(coc.spell.form.mappings.name.label) cant be null"
+                    },
+                    "cost": {
+                        "label": "Casting cost",
+                        "notNullMessage": "$t(coc.spell.form.mappings.cost.label) cant be null"
+                    },
+                    "conjuringTime": {
+                        "label": "Casting time",
+                        "notNullMessage": "$t(coc.spell.form.mappings.conjuringTime.label) cant be null"
+                    },
+                    "description": {
+                        "label": "Description",
+                        "notNullMessage": "$t(coc.spell.form.mappings.description.label) cant be null"
+                    },
+                    "visceralForm": {
+                        "label": "Visceral form"
+                    },
+                    "alternativeNames": {
+                        "label": "Alternative names"
+                    },
+                    "monsterKnowledge": {
+                        "label": "Monster knowledge"
+                    },
+                    "categories": {
+                        "label": "Categories"
+                    }
+                },
+                "saveMessage": "Spell saved successfully!"
+            }
+        }
+    }
+}

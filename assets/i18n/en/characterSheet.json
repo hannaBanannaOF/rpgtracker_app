@@ -1,0 +1,90 @@
+{
+    "myCharacterSheets": "My character sheets",
+    "characterSheetSession": "Session: {{sessionName}}",
+    "coc" : {
+        "hero": "Hero (PCoC)",
+        "investigator": "Investigator",
+        "characterName": "Character name",
+        "playerName": "Player name",
+        "age": "Age",
+        "residency": "Residency",
+        "birthplace": "Birthplace",
+        "occupation": {
+            "title": "Occupation",
+            "unoccupied": "Unoccupied",
+            "description": "Description",
+            "suggestedContacts": "Suggested contacts"
+        },
+        "archetype": "Archetype",
+        "characteristics": {
+            "title": "Characteristics",
+            "str": "STR",
+            "dex": "DEX",
+            "pow": "POW",
+            "con": "CON",
+            "app": "APP",
+            "edu": "EDU",
+            "siz": "SIZ",
+            "int": "INT",
+            "moveRate": "Move rate"
+        },
+        "healthPoints": {
+            "title": "Health points",
+            "dying": "Dying",
+            "unconscious": "Unconscious",
+            "maxHp": "Max HP",
+            "majorWound": "Major wound"
+        },
+        "sanity": {
+            "title": "Sanity",
+            "insane": "Insane",
+            "maxSan": "Max SAN",
+            "initialSan": "Initial SAN",
+            "tempInsanity": "Temporary insanity",
+            "indefInsanity": "Indefinitive insanity"
+        },
+        "luck": {
+            "title": "Luck",
+            "outOfLuck": "Out of luck"
+        },
+        "magicPoints": {
+            "title": "Magic points",
+            "maxMp": "Max MP"
+        },
+        "skills": "Skills",
+        "weapons": {
+            "title": "Weapons",
+            "basicInfo": {
+                "title": "Basic information",
+                "damage": "Damage",
+                "attacks": "Attacks each round"
+            },
+            "advancedInfo": {
+                "title": "Advanced information",
+                "normalSuccess": "Normal success",
+                "goodSuccess": "Good success",
+                "extremeSuccess": "Extreme success",
+                "meleeWeapon": "Melee weapon",
+                "availableAmmo": "Available ammo"
+            }
+        },
+        "combat": {
+            "title": "Combat",
+            "bonusDamage": "Bonus damage",
+            "build": "Build",
+            "dodge": "Dodge"
+        },
+        "pulpTalent": {
+            "title": "Talents (PCoC)",
+            "description": "Description"
+        },
+        "spells": {
+            "title": "Spells",
+            "cost": "Casting cost",
+            "castingTime": "Casting time",
+            "description": "Description",
+            "oniric": "Oniric",
+            "folk": "Folk"
+        }
+    }
+}

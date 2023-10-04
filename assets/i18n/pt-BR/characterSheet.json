@@ -1,0 +1,90 @@
+{
+    "myCharacterSheets": "Minhas fichas",
+    "characterSheetSession": "Mesa: {{sessionName}}",
+    "coc" : {
+        "hero": "Herói (PCoC)",
+        "investigator": "Investigador",
+        "characterName": "Nome",
+        "playerName": "Jogador",
+        "age": "Idade",
+        "residency": "Residência",
+        "birthplace": "Naturalidade",
+        "occupation": {
+            "title": "Ocupação",
+            "unoccupied": "Sem ocupação",
+            "description": "Descrição",
+            "suggestedContacts": "Contatos sugeridos"
+        },
+        "archetype": "Arquétipo",
+        "characteristics": {
+            "title": "Características",
+            "str": "FOR",
+            "dex": "DES",
+            "pow": "POD",
+            "con": "CON",
+            "app": "APA",
+            "edu": "EDU",
+            "siz": "TAM",
+            "int": "INT",
+            "moveRate": "Movimento"
+        },
+        "healthPoints": {
+            "title": "Pontos de vida",
+            "dying": "Morrendo",
+            "unconscious": "Inconsciente",
+            "maxHp": "HP máx",
+            "majorWound": "Ferrimento grave"
+        },
+        "sanity": {
+            "title": "Sanidade",
+            "insane": "Insano",
+            "maxSan": "SAN máx",
+            "initialSan": "SAN inicial",
+            "tempInsanity": "Insanidade temporária",
+            "indefInsanity": "Insanidade indefinitiva"
+        },
+        "luck": {
+            "title": "Sorte",
+            "outOfLuck": "Sem sorte"
+        },
+        "magicPoints": {
+            "title": "Pontos de magia",
+            "maxMp": "MP máx"
+        },
+        "skills": "Perícias",
+        "weapons": {
+            "title": "Armas",
+            "basicInfo": {
+                "title": "Informação básica",
+                "damage": "Dano",
+                "attacks": "Ataques por round"
+            },
+            "advancedInfo": {
+                "title": "Informações avançadas",
+                "normalSuccess": "Sucesso normal",
+                "goodSuccess": "Sucesso bom",
+                "extremeSuccess": "Sucesso extremo",
+                "meleeWeapon": "Arma mano-a-mano",
+                "availableAmmo": "Munição disponível"
+            }
+        },
+        "combat": {
+            "title": "Combate",
+            "bonusDamage": "Dano bônus",
+            "build": "Corpo",
+            "dodge": "Esquiva"
+        },
+        "pulpTalent": {
+            "title": "Talentos (PCoC)",
+            "description": "Descrição"
+        },
+        "spells": {
+            "title": "Feitiços",
+            "cost": "Custo de conjuração",
+            "castingTime": "Tempo de conjuração",
+            "description": "Descrição",
+            "oniric": "Onírico",
+            "folk": "Folclórico"
+        }
+    }
+}

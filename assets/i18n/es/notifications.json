@@ -1,0 +1,19 @@
+{
+    "noPermission" : "No tiene permiso para ver este recurso!",
+    "dataFetchError": "No se pueden obtener datos!",
+    "characterSheet": {
+        "notFound": "No se pueden obtener los detalles de la hoja de personaje!",
+        "fetchError": "No se pueden obtener las hojas de personaje de usuario!"
+    },
+    "session": {
+        "notFound": "No se pueden obtener los detalles de la sesión!",
+        "fetchError": "No se pueden obtener las sesiones de usuario!"
+    },
+    "lookup": {
+        "fetchError": "No se pueden obtener los valores de búsqueda!"
+    },
+    "delete": {
+        "success": "Elemento eliminado correctamente!",
+        "error": "No se puede eliminar el elemento!"
+    }
+}

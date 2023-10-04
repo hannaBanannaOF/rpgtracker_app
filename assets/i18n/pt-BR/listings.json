@@ -1,0 +1,198 @@
+{
+    "coc": {
+        "ammo": {
+            "title": "Call of Cthulhu - Munição",
+            "form": {
+                "add": "Adicionar munição",
+                "edit": "Editar munição",
+                "mappings": {
+                    "name": {
+                        "label": "Nome",
+                        "notNullMessage": "$t(coc.ammo.form.mappings.name.label) não pode ser vazio"
+                    },
+                    "roundsShot": {
+                        "label": "Tiros dados",
+                        "notNullMessage": "$t(coc.ammo.form.mappings.roundsShot.label) não pode ser vazio"
+                    }
+                },
+                "saveMessage": "Munição salva com sucesso!"
+            }
+        },
+        "occupation": {
+            "title": "Call of Cthulhu - Ocupações",
+            "form": {
+                "add": "Adicionar ocupação",
+                "edit": "Editar ocupação",
+                "mappings": {
+                    "name": {
+                        "label": "Nome",
+                        "notNullMessage": "$t(coc.occupation.form.mappings.name.label) não pode ser vazio"
+                    },
+                    "description": {
+                        "label": "Descrição",
+                        "notNullMessage": "$t(coc.occupation.form.mappings.description.label) não pode ser vazio"
+                    },
+                    "skillPointCalculationRule": {
+                        "label": "Regra de cálculo de pontos ocupacionais",
+                        "notNullMessage": "$t(coc.occupation.form.mappings.skillPointCalculationRule.label) não pode ser vazio"
+                    },
+                    "minimumCreditRating": {
+                        "label": "Rank de crédito mínimo",
+                        "notNullMessage": "$t(coc.occupation.form.mappings.minimumCreditRating.label) não pode ser vazio"
+                    },
+                    "maximumCreditRating": {
+                        "label": "Rank de crédito máximo",
+                        "notNullMessage": "$t(coc.occupation.form.mappings.maximumCreditRating.label) não pode ser vazio"
+                    },
+                    "suggestedContacts": {
+                        "label": "Contatos sugeridos"
+                    },
+                    "epochPersonalSkillChoices": {
+                        "label": "Escolha de perícias - Época ou Pessoal"
+                    },
+                    "typedSkillChoices": {
+                        "label": "Escolha de perícias - por tipo"
+                    },
+                    "typedSkillChoicesKind": {
+                        "label": "Tipo da perícia"
+                    },
+                    "skills": {
+                        "label": "Perícias"
+                    }
+                },
+                "saveMessage": "Ocupação salva com sucesso!"
+            }
+        },
+        "pulpTalent": {
+            "title": "Call of Cthulhu - Talentos (PCoC)",
+            "form": {
+                "add": "Adicionar talento (PCoC)",
+                "edit": "Editar talento (PCoC)",
+                "mappings": {
+                    "name": {
+                        "label": "Nome",
+                        "notNullMessage": "$t(coc.pulpTalent.form.mappings.name.label) não pode ser vazio"
+                    },
+                    "description": {
+                        "label": "Descrição",
+                        "notNullMessage": "$t(coc.pulpTalent.form.mappings.description.label) não pode ser vazio"
+                    }
+                },
+                "saveMessage": "Talento salvo com sucesso!"
+            }
+        },
+        "skill": {
+            "title": "Call of Cthulhu - Perícias",
+            "form": {
+                "add": "Adicionar perícia",
+                "edit": "Editar perícia",
+                "mappings": {
+                    "name": {
+                        "label": "Nome",
+                        "notNullMessage": "$t(coc.skill.form.mappings.name.label) não pode ser vazio"
+                    },
+                    "baseValue": {
+                        "label": "Valor base"
+                    },
+                    "usable": {
+                        "label": "Utilizável em ficha"
+                    },
+                    "rarity": {
+                        "label": "Raridade",
+                        "notNullMessage": "$t(coc.skill.form.mappings.rarity.label) não pode ser vazio"
+                    },
+                    "kind": {
+                        "label": "Tipo",
+                        "notNullMessage": "$t(coc.skill.form.mappings.kind.label) não pode ser vazio"
+                    },
+                    "parentSkillId": {
+                        "label": "Perícia pai"
+                    }
+                },
+                "saveMessage": "Perícia salva com sucesso!"
+            }
+        },
+        "weapon": {
+            "title": "Call of Cthulhu - Armas",
+            "form": {
+                "add": "Adicionar arma",
+                "edit": "Editar arma",
+                "mappings": {
+                    "name": {
+                        "label": "Nome",
+                        "notNullMessage": "$t(coc.weapon.form.mappings.name.label) não pode ser vazio"
+                    },
+                    "range": {
+                        "label": "Alcançe"
+                    },
+                    "damage": {
+                        "label": "Dano",
+                        "notNullMessage": "$t(coc.weapon.form.mappings.damage.label) não pode ser vazio"
+                    },
+                    "attacksPerRound": {
+                        "label": "Ataques por round",
+                        "notNullMessage": "$t(coc.weapon.form.mappings.attacksPerRound.label) não pode ser vazio"
+                    },
+                    "malfunction": {
+                        "label": "Defeito"
+                    },
+                    "isMelee": {
+                        "label": "Arma mano-a-mano"
+                    },
+                    "isThrowable": {
+                        "label": "Arremesável"
+                    },
+                    "isDualWield": {
+                        "label": "Empunhadura dupla"
+                    },
+                    "skillUsedId": {
+                        "label": "Perícia utilizada",
+                        "notNullMessage": "$t(coc.weapon.form.mappings.skillUsedId.label) não pode ser vazio"
+                    },
+                    "ammoId": {
+                        "label": "Munição utilizada"
+                    }
+                },
+                "saveMessage": "Arma salva com sucesso!"
+            }
+        },
+        "spell": {
+            "title": "Call of Cthulhu - Feitiços",
+            "form": {
+                "add": "Adicionar feitiço",
+                "edit": "Editar feitiço",
+                "mappings": {
+                    "name": {
+                        "label": "Nome",
+                        "notNullMessage": "$t(coc.spell.form.mappings.name.label) não pode ser vazio"
+                    },
+                    "cost": {
+                        "label": "Custo de conjuração",
+                        "notNullMessage": "$t(coc.spell.form.mappings.cost.label) não pode ser vazio"
+                    },
+                    "conjuringTime": {
+                        "label": "Tempo de conjuração",
+                        "notNullMessage": "$t(coc.spell.form.mappings.conjuringTime.label) não pode ser vazio"
+                    },
+                    "description": {
+                        "label": "Descrição",
+                        "notNullMessage": "$t(coc.spell.form.mappings.description.label) não pode ser vazio"
+                    },
+                    "visceralForm": {
+                        "label": "Forma visceral"
+                    },
+                    "alternativeNames": {
+                        "label": "Nomes alternativos"
+                    },
+                    "monsterKnowledge": {
+                        "label": "Conhecimento de montros"
+                    },
+                    "categories": {
+                        "label": "Categorias"
+                    }
+                },
+                "saveMessage": "Feitiço salvo com sucesso!"
+            }
+        }
+    }
+}

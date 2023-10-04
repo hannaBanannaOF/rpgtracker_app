@@ -1,0 +1,19 @@
+{
+    "noPermission" : "Você não tem permissão para ver esse recurso!",
+    "dataFetchError": "Não foi possível buscar dados!",
+    "characterSheet": {
+        "notFound": "Não foi possível buscar os detalhes da ficha!",
+        "fetchError": "Não foi possível buscar fichas do usuário!"
+    },
+    "session": {
+        "notFound": "Não foi possível buscar os detalhes da mesa!",
+        "fetchError": "Não foi possível buscar as mesas do usuário!"
+    },
+    "lookup": {
+        "fetchError": "Não foi possível buscar dados do lookup!"
+    },
+    "delete": {
+        "success": "Item excluído com sucesso!",
+        "error": "Não foi possível excluir item!"
+    }
+}

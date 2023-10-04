@@ -1,0 +1,18 @@
+{
+    "main": {
+        "home": "Home",
+        "myCHaracterSheets": "Minhas fichas",
+        "MyDMedSessions": "Minhas sessões mestradas",
+        "coc": "Call of Cthulhu - Cadastros",
+        "profile": "Perfil",
+        "logout": "Sair"
+    },
+    "coc": {
+        "ammo": "Munição",
+        "occupations": "Ocupações",
+        "pulpTalents": "Talentos (PCoC)",
+        "skills": "Perícias",
+        "weapons": "Armas",
+        "spells": "Feitiços"
+    }
+}

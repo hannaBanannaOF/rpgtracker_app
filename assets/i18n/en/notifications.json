@@ -1,0 +1,19 @@
+{
+    "noPermission" : "You don't have permission to see this resource!",
+    "dataFetchError": "Unable to fetch data!",
+    "characterSheet": {
+        "notFound": "Unable to get character sheet details!",
+        "fetchError": "Unable to get user character sheets!"
+    },
+    "session": {
+        "notFound": "Unable to get session details!",
+        "fetchError": "Unable to get user sessions!"
+    },
+    "lookup": {
+        "fetchError": "Unable to get lookup values!"
+    },
+    "delete": {
+        "success": "Item sucessfully deleted!",
+        "error": "Unable to delete item!"
+    }
+}
