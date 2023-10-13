@@ -2,6 +2,7 @@
     "myCharacterSheets": "Mis hojas de personaje",
     "characterSheetSession": "Sesión: {{sessionName}}",
     "coc" : {
+        "basicInfo": "Información básica",
         "hero": "Héroe (PCoC)",
         "investigator": "Investigador",
         "characterName": "Nombre",
@@ -80,6 +81,7 @@
         },
         "spells": {
             "title": "Hechizos",
+            "basicInfo": "Información básica",
             "cost": "Coste de lanzamiento",
             "castingTime": "Tiempo de lanzamiento",
             "description": "Descripción",

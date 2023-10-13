@@ -72,7 +72,7 @@ class SessionManager {
     }
   }
 
-  void signIn(String code) async {
+  Future signIn(String code) async {
     Dio dio = Dio();
     var response = await dio.post(
         '${Endpoints.keycloakBaseUrl}${Endpoints.keycloakTokenEndpoint}',

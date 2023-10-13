@@ -2,6 +2,7 @@
     "myCharacterSheets": "Minhas fichas",
     "characterSheetSession": "Mesa: {{sessionName}}",
     "coc" : {
+        "basicInfo": "Informações básicas",
         "hero": "Herói (PCoC)",
         "investigator": "Investigador",
         "characterName": "Nome",
@@ -80,6 +81,7 @@
         },
         "spells": {
             "title": "Feitiços",
+            "basicInfo": "Informações básicas",
             "cost": "Custo de conjuração",
             "castingTime": "Tempo de conjuração",
             "description": "Descrição",

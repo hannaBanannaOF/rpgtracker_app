@@ -51,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (code != null) {
                         // ignore: use_build_context_synchronously
                         context.loaderOverlay.show();
-                        getIt<SessionManager>().signIn(code);
+                        await getIt<SessionManager>().signIn(code);
                         // ignore: use_build_context_synchronously
                         context.loaderOverlay.hide();
                       }

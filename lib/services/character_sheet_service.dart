@@ -1,4 +1,5 @@
 import 'package:rpgtracker_app/constants/endpoints.dart';
+import 'package:rpgtracker_app/data/details/coc/coc_character_sheet.dart';
 import 'package:rpgtracker_app/data/listings/character_sheet.dart';
 import 'package:rpgtracker_app/data/rest_result.dart';
 import 'package:rpgtracker_app/extensions/response.dart';
@@ -17,6 +18,19 @@ class CharacterSheetService {
             response.data,
             (data) =>
                 CharacterSheetListing.fromJson(data as Map<String, dynamic>));
+      }
+    } catch (_) {}
+    return result;
+  }
+
+  static Future<CoCCharacterSheet?> getCoCCharacterSheet(String uuid) async {
+    var client = await DioClient.instance.client;
+    CoCCharacterSheet? result;
+    try {
+      var response = await client.get(Endpoints.rpgtrackerCoCCharacterSheetGet
+          .replaceAll('{sheetId}', uuid));
+      if (response.isOk) {
+        result = CoCCharacterSheet.fromJson(response.data);
       }
     } catch (_) {}
     return result;

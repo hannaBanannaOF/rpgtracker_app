@@ -7,6 +7,13 @@ abstract class BaseProvider<T> extends ChangeNotifier {
   int page = 0;
   bool canLoadMore = true;
 
+  void reset() {
+    data = [];
+    loading = true;
+    page = 0;
+    canLoadMore = true;
+  }
+
   Future getData({bool loadMore = false});
 
   Future load(

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:loader_overlay/loader_overlay.dart';
 import 'package:provider/provider.dart';
+import 'package:rpgtracker_app/constants/routes.dart';
 import 'package:rpgtracker_app/extensions/string.dart';
 import 'package:rpgtracker_app/providers/character_sheet_provider.dart';
+import 'package:rpgtracker_app/screen/coc/character_sheet_detail_screen.dart';
+import 'package:rpgtracker_app/ui/empty_list.dart';
+import 'package:rpgtracker_app/ui/list_tile_title.dart';
 
 class CharacterSheetListScreen extends StatefulWidget {
   const CharacterSheetListScreen({super.key});
@@ -12,21 +17,18 @@ class CharacterSheetListScreen extends StatefulWidget {
 }
 
 class _CharacterSheetListScreenState extends State<CharacterSheetListScreen> {
-  CharacterSheetProvider? provider;
   final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    provider = CharacterSheetProvider();
     Future.delayed(Duration.zero, () {
-      provider!.getData();
+      Provider.of<CharacterSheetProvider>(context, listen: false).getData();
     });
   }
 
   @override
   void dispose() {
-    provider!.dispose();
     _scrollController.dispose();
     super.dispose();
   }
@@ -41,16 +43,16 @@ class _CharacterSheetListScreenState extends State<CharacterSheetListScreen> {
         child: Padding(
           padding: const EdgeInsets.all(12),
           child: ChangeNotifierProvider<CharacterSheetProvider>.value(
-            value: provider!,
+            value: Provider.of<CharacterSheetProvider>(context),
             child: Consumer<CharacterSheetProvider>(
               builder: (context, value, child) {
                 if (value.loading) {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
+                  context.loaderOverlay.show();
+                } else {
+                  context.loaderOverlay.hide();
                 }
-                if (value.data.isEmpty) {
-                  return const Center(child: Text("Nada"));
+                if (value.data.isEmpty && !value.loading) {
+                  return const EmptyList();
                 }
                 return NotificationListener<ScrollEndNotification>(
                   onNotification: _handleScrollNotification,
@@ -60,12 +62,8 @@ class _CharacterSheetListScreenState extends State<CharacterSheetListScreen> {
                         var item = value.data[index];
                         return Card(
                           child: ListTile(
-                            title: Text(
+                            title: ListTileTitle(
                               item.characterName!,
-                              style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
                             ),
                             subtitle: item.session != null
                                 ? Text('characterSheet:characterSheetSession'
@@ -73,17 +71,35 @@ class _CharacterSheetListScreenState extends State<CharacterSheetListScreen> {
                                     'sessionName': item.session!.sessionName!
                                   }))
                                 : null,
-                            leading: Container(
-                              padding: const EdgeInsets.all(8),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Theme.of(context).colorScheme.primary,
-                              ),
+                            leading: CircleAvatar(
+                              backgroundColor:
+                                  Theme.of(context).colorScheme.primary,
                               child: Icon(
                                 item.system!.icon,
                                 color: Colors.black,
                               ),
                             ),
+                            trailing: const Icon(Icons.chevron_right),
+                            onTap: () async {
+                              context.loaderOverlay.show();
+                              var sheet =
+                                  await Provider.of<CharacterSheetProvider>(
+                                          context,
+                                          listen: false)
+                                      .loadCoCSheet(item.uuid ?? '');
+                              // ignore: use_build_context_synchronously
+                              context.loaderOverlay.hide();
+                              if (sheet != null) {
+                                // ignore: use_build_context_synchronously
+                                Navigator.of(context).pushNamed(
+                                  Routes.cocSheetDetails,
+                                  arguments: CoCCharacterSheetDetailScreenArgs(
+                                    item.characterName ?? '',
+                                    sheet,
+                                  ),
+                                );
+                              }
+                            },
                           ),
                         );
                       },
@@ -103,7 +119,8 @@ class _CharacterSheetListScreenState extends State<CharacterSheetListScreen> {
   bool _handleScrollNotification(ScrollNotification notification) {
     if (notification is ScrollEndNotification &&
         _scrollController.position.extentAfter == 0) {
-      provider!.getData(loadMore: true);
+      Provider.of<CharacterSheetProvider>(context, listen: false)
+          .getData(loadMore: true);
     }
     return false;
   }

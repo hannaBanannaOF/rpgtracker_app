@@ -45,7 +45,10 @@ class _HomeScreenState extends State<HomeScreen> {
             if (item.route != null) {
               return ListTile(
                 title: Text(item.label),
-                onTap: () => Navigator.pushNamed(context, item.route!),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.pushNamed(context, item.route!);
+                },
               );
             } else {
               return ExpansionTile(

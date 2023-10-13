@@ -11,9 +11,6 @@ class SessionListing {
   TRPGSystem? system;
   bool? inPlay;
 
-  @JsonKey(includeToJson: false, includeFromJson: false)
-  List<String>? users;
-
   SessionListing();
 
   factory SessionListing.fromJson(Map<String, dynamic> json) =>

@@ -2,6 +2,7 @@
     "myCharacterSheets": "My character sheets",
     "characterSheetSession": "Session: {{sessionName}}",
     "coc" : {
+        "basicInfo": "Basic Info",
         "hero": "Hero (PCoC)",
         "investigator": "Investigator",
         "characterName": "Character name",
@@ -80,6 +81,7 @@
         },
         "spells": {
             "title": "Spells",
+            "basicInfo": "Basic Info",
             "cost": "Casting cost",
             "castingTime": "Casting time",
             "description": "Description",

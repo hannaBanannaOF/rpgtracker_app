@@ -12,7 +12,20 @@ class Endpoints {
   static const String rpgtrackerCoreMyDmedSessionsGet =
       '/core/api/v1/my-dm-sessions';
 
-  // RPGTracker - WS
+  // RPGTracker - Call of Cthulhu
+  static const String rpgtrackerCoCCharacterSheetGet =
+      '/coc/api/v1/character-sheets/{sheetId}';
+  static const String rpgtrackerCoCSessionGet =
+      '/coc/api/v1/sessions/{sessionId}';
+
+  // RPGTracker - Core - WS
   static const String rpgtrackerCoreWsUrl = 'ws://10.0.2.2:8080/core/ws';
   static const String rpgtrackerCoreWsUsers = '/topic/{userId}/users';
+
+  // RPGTracker - Call of Cthulhu - WS
+  static const String rpgtrackerCoCWsUrl = 'ws://10.0.2.2:8080/coc/ws';
+  static const String rpgtrackerCoCWsCharacterInfo =
+      '/topic/{userId}/character-sheet/{sheetId}/infos';
+  static const String rpgtrackerCoCWsSessionDetails =
+      '/topic/{userId}/sessions/{sessionId}';
 }

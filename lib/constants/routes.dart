@@ -2,6 +2,12 @@ class Routes {
   static const String sheetsRoute = '/me/sheets';
   static const String sessionsRoute = '/me/sessions';
 
+  //Character sheet details
+  static const String cocSheetDetails = '/coc/sheet/details';
+
+  //Session details
+  static const String cocSessionDetails = '/coc/session/details';
+
   //Call of cthulhu
   static const String cocAmmoListingRoute = '/listing/coc/ammo';
   static const String cocOccupationsListingRoute = '/listing/coc/occupations';
