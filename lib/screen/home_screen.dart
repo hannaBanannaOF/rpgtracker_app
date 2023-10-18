@@ -54,9 +54,15 @@ class _HomeScreenState extends State<HomeScreen> {
               return ExpansionTile(
                 title: Text(item.label),
                 children: (item.subMenu ?? [])
-                    .map((e) => ListTile(
-                          title: Text(e.label),
-                        ))
+                    .map(
+                      (e) => ListTile(
+                        title: Text(e.label),
+                        onTap: () {
+                          Navigator.of(context).pop();
+                          Navigator.pushNamed(context, e.route!);
+                        },
+                      ),
+                    )
                     .toList(),
               );
             }

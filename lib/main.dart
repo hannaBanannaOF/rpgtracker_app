@@ -9,6 +9,8 @@ import 'package:rpgtracker_app/managers/session_manager.dart';
 import 'package:rpgtracker_app/providers/character_sheet_provider.dart';
 import 'package:rpgtracker_app/providers/session_provider.dart';
 import 'package:rpgtracker_app/screen/character_sheet_list_screen.dart';
+import 'package:rpgtracker_app/screen/coc/ammo_detail_screen.dart';
+import 'package:rpgtracker_app/screen/coc/ammo_list_screen.dart';
 import 'package:rpgtracker_app/screen/coc/character_sheet_detail_screen.dart';
 import 'package:rpgtracker_app/screen/coc/session_details_screen.dart';
 import 'package:rpgtracker_app/screen/home_screen.dart';
@@ -101,7 +103,9 @@ class _RPGTrackerAppState extends State<RPGTrackerApp>
             Routes.cocSheetDetails: (context) =>
                 const CoCCharacterScreenDetailScreen(),
             Routes.cocSessionDetails: (context) =>
-                const CoCSessionDetailsScreen()
+                const CoCSessionDetailsScreen(),
+            Routes.cocAmmoListingRoute: (context) => const CoCAmmoListScreen(),
+            Routes.cocAmmoDetailRoute: (context) => const CoCAmmoDetailScreen(),
           },
           home: const ScreenBuilder(),
         ),

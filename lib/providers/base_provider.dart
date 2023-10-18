@@ -16,6 +16,20 @@ abstract class BaseProvider<T> extends ChangeNotifier {
 
   Future getData({bool loadMore = false});
 
+  Future<T?> getOne(Future<T?> Function(String id) get, String id) async {
+    return await get(id);
+  }
+
+  Future<bool> removeItem(
+      Future<bool> Function(String id) delete, String id) async {
+    return await delete(id);
+  }
+
+  void removeAt(int index) {
+    data.removeAt(index);
+    notifyListeners();
+  }
+
   Future load(
       Future<RestResult<T>?> Function(int page) getData, bool loadMore) async {
     if (canLoadMore) {

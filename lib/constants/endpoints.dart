@@ -17,6 +17,9 @@ class Endpoints {
       '/coc/api/v1/character-sheets/{sheetId}';
   static const String rpgtrackerCoCSessionGet =
       '/coc/api/v1/sessions/{sessionId}';
+  static const String rpgtrackerCoCAmmoListGet = '/coc/api/v1/ammo';
+  static const String rpgtrackerCoCAmmoDetailsGet = '/coc/api/v1/ammo/{ammoId}';
+  static const String rpgtrackerCoCAmmoDelete = '/coc/api/v1/ammo/{ammoId}';
 
   // RPGTracker - Core - WS
   static const String rpgtrackerCoreWsUrl = 'ws://10.0.2.2:8080/core/ws';

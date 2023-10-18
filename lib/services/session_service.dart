@@ -9,9 +9,12 @@ class SessionService {
   static Future<RestResult<SessionListing>?> getMyDmedSessions(int page) async {
     RestResult<SessionListing>? result;
     var client = await DioClient.instance.client;
+    var url = StringBuffer(Endpoints.rpgtrackerCoreMyDmedSessionsGet);
+    if (page > 0) {
+      url.write('?page=$page');
+    }
     try {
-      var response =
-          await client.get(Endpoints.rpgtrackerCoreMyDmedSessionsGet);
+      var response = await client.get(url.toString());
       if (response.isOk) {
         result = RestResult<SessionListing>.fromJson(response.data,
             (data) => SessionListing.fromJson(data as Map<String, dynamic>));

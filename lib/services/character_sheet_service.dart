@@ -10,9 +10,12 @@ class CharacterSheetService {
       int page) async {
     var client = await DioClient.instance.client;
     RestResult<CharacterSheetListing>? result;
+    var url = StringBuffer(Endpoints.rpgtrackerCoreCharacterSheetGet);
+    if (page > 0) {
+      url.write('?page=$page');
+    }
     try {
-      var response =
-          await client.get(Endpoints.rpgtrackerCoreCharacterSheetGet);
+      var response = await client.get(url.toString());
       if (response.isOk) {
         result = RestResult<CharacterSheetListing>.fromJson(
             response.data,

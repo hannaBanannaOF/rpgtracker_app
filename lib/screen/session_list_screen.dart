@@ -67,7 +67,11 @@ class _SessionListScreenState extends State<SessionListScreen> {
                         itemBuilder: (context, index) {
                           var item = value.data[index];
                           return Card(
+                            color: Colors.transparent,
                             child: ListTile(
+                              tileColor: Theme.of(context)
+                                  .colorScheme
+                                  .secondaryContainer,
                               title: ListTileTitle(
                                 item.sessionName!,
                               ),

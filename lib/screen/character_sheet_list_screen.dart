@@ -60,47 +60,47 @@ class _CharacterSheetListScreenState extends State<CharacterSheetListScreen> {
                       controller: _scrollController,
                       itemBuilder: (context, index) {
                         var item = value.data[index];
-                        return Card(
-                          child: ListTile(
-                            title: ListTileTitle(
-                              item.characterName!,
-                            ),
-                            subtitle: item.session != null
-                                ? Text('characterSheet:characterSheetSession'
-                                    .translate(context, args: {
-                                    'sessionName': item.session!.sessionName!
-                                  }))
-                                : null,
-                            leading: CircleAvatar(
-                              backgroundColor:
-                                  Theme.of(context).colorScheme.primary,
-                              child: Icon(
-                                item.system!.icon,
-                                color: Colors.black,
-                              ),
-                            ),
-                            trailing: const Icon(Icons.chevron_right),
-                            onTap: () async {
-                              context.loaderOverlay.show();
-                              var sheet =
-                                  await Provider.of<CharacterSheetProvider>(
-                                          context,
-                                          listen: false)
-                                      .loadCoCSheet(item.uuid ?? '');
-                              // ignore: use_build_context_synchronously
-                              context.loaderOverlay.hide();
-                              if (sheet != null) {
-                                // ignore: use_build_context_synchronously
-                                Navigator.of(context).pushNamed(
-                                  Routes.cocSheetDetails,
-                                  arguments: CoCCharacterSheetDetailScreenArgs(
-                                    item.characterName ?? '',
-                                    sheet,
-                                  ),
-                                );
-                              }
-                            },
+                        return ListTile(
+                          tileColor:
+                              Theme.of(context).colorScheme.secondaryContainer,
+                          title: ListTileTitle(
+                            item.characterName!,
                           ),
+                          subtitle: item.session != null
+                              ? Text('characterSheet:characterSheetSession'
+                                  .translate(context, args: {
+                                  'sessionName': item.session!.sessionName!
+                                }))
+                              : null,
+                          leading: CircleAvatar(
+                            backgroundColor:
+                                Theme.of(context).colorScheme.primary,
+                            child: Icon(
+                              item.system!.icon,
+                              color: Colors.black,
+                            ),
+                          ),
+                          trailing: const Icon(Icons.chevron_right),
+                          onTap: () async {
+                            context.loaderOverlay.show();
+                            var sheet =
+                                await Provider.of<CharacterSheetProvider>(
+                                        context,
+                                        listen: false)
+                                    .loadCoCSheet(item.uuid ?? '');
+                            // ignore: use_build_context_synchronously
+                            context.loaderOverlay.hide();
+                            if (sheet != null) {
+                              // ignore: use_build_context_synchronously
+                              Navigator.of(context).pushNamed(
+                                Routes.cocSheetDetails,
+                                arguments: CoCCharacterSheetDetailScreenArgs(
+                                  item.characterName ?? '',
+                                  sheet,
+                                ),
+                              );
+                            }
+                          },
                         );
                       },
                       separatorBuilder: (context, index) => const SizedBox(
